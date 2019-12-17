@@ -60,7 +60,7 @@
 //#define CR10S_S5
 
 //Ender Series
-//#define ENDER3
+#define ENDER3
 //#define ENDER5
 
 //Sovol Machines
@@ -81,7 +81,7 @@
 //#define TM3DAERO
 //#define TM3DAERO_EXTENDED
 //#define PETSFANG //This is the RIGHT mounted version - if using the left mount please use the CUSTOM_PROBE option.
-//#define CUSTOM_PROBE
+#define CUSTOM_PROBE
 
 // PT100 Thermocouple Support
 // Refer to the EZBoard installation documentation for connecting the PT100 to the EZBoard Expansion Header
@@ -150,7 +150,7 @@
 //#define PROBING_MOTORS_OFF
 
 // Heaters will stay on during probing - only use if directed to by support. Do not use on AC beds.
-//#define HEATERS_ON_DURING_PROBING
+#define HEATERS_ON_DURING_PROBING
 
 // Letting the bed heat recover between probes can increase accuracy due to the bed warping during cooling/heating
 // Enabling the below option will let the bed get back to temperature during probing but will increase probing times.
@@ -158,7 +158,7 @@
 
 // If you want a more granular control over the babystepping uncomment the below line.
 // This will make the adjustment finer than the standard setting.
-//#define FINE_BABYSTEPPING
+#define FINE_BABYSTEPPING
 
 // This will extrapolate the implied tilt of the bed outside of the probe area. Do not comment out unless directed by support.
 #define EZABL_OUTSIDE_GRID_COMPENSATION
@@ -195,7 +195,7 @@
   * Specify a Probe position as { X, Y, Z }
   * Do NOT enter an number for the Z position in here. Store your offset in EEPROM.
   */
-  #define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+  #define NOZZLE_TO_PROBE_OFFSET { -39, -7, -2.3 }
 #endif
 
 //===========================================================================
@@ -264,7 +264,7 @@
 //#define FAN_FIX
 
 // Use your own printer name
-//#define USER_PRINTER_NAME "CHANGE ME"
+#define USER_PRINTER_NAME "DanceTech E3"
 
 // If your printer is homing to the endstops hard uncomment this to change the homing speed/divisor to make it less aggressive.
 //#define SLOWER_HOMING
@@ -292,7 +292,7 @@
 // If you want to use the BL-Touch install your EZOut Board, uncomment the 2 lines below, uncomment the CUSTOM_PROBE option in your printer section,
 // and then enter your probe offsets in the CUSTOM_PROBE section above. DO NOT USE A "PIN 27" or "EZOUT" board with the EZBOARD.
 //
-//#define BLTOUCH
+#define BLTOUCH
 // Here is where you set your servo pin. For EZBoard use P2_04
 //#define SERVO0_PIN P2_04
 
