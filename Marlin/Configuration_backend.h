@@ -85,7 +85,7 @@
 //CR-10 and Ender 3 Model Settings
 #if ENABLED(CR10) || ENABLED(CR10_MINI) || ENABLED(CR10_S4) || ENABLED(CR10_S5) || ENABLED(ENDER3) || ENABLED(ENDER5) || ENABLED(SOVOL_SV01)
   #define SERIAL_PORT -1
-  #define BAUDRATE 115200
+  #define BAUDRATE 500000
   
   #define EXTRUDERS 1
 
@@ -435,13 +435,13 @@
   #if ENABLED(EZABL_SUPERFASTPROBE)
     #define MULTIPLE_PROBING 3
   #else
-    #define MULTIPLE_PROBING 2
+    //#define MULTIPLE_PROBING 2
   #endif
 
   #if ENABLED(BLTOUCH)
-    #define Z_CLEARANCE_DEPLOY_PROBE   15
-    #define Z_CLEARANCE_BETWEEN_PROBES 10
-	#define Z_CLEARANCE_MULTI_PROBE    10
+    #define Z_CLEARANCE_DEPLOY_PROBE   6
+    #define Z_CLEARANCE_BETWEEN_PROBES 2
+    #define Z_CLEARANCE_MULTI_PROBE    2
     #define ENDSTOPPULLUP_ZMIN
     #define ENDSTOPPULLUP_ZMIN_PROBE
   #elif ENABLED(EZABL_SUPERFASTPROBE)
@@ -451,7 +451,7 @@
   #else
     #define Z_CLEARANCE_DEPLOY_PROBE   5
     #define Z_CLEARANCE_BETWEEN_PROBES 3
-	#define Z_CLEARANCE_MULTI_PROBE    3
+    #define Z_CLEARANCE_MULTI_PROBE    3
   #endif
 
   #define Z_PROBE_OFFSET_RANGE_MIN  -5
@@ -459,7 +459,7 @@
 
   #define Z_MIN_PROBE_REPEATABILITY_TEST
   #define Z_AFTER_PROBING           5
-  #define Z_PROBE_LOW_POINT         -3
+  #define Z_PROBE_LOW_POINT         -1
 
   #define AUTO_BED_LEVELING_BILINEAR
 
@@ -647,7 +647,7 @@
   #define LEVEL_CORNERS_Z_HOP 5.0
 #endif
 
-#define SPEAKER
+#undef SPEAKER
 
 #if ENABLED(FAN_FIX)
   #define FAN_SOFT_PWM

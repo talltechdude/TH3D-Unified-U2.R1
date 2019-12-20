@@ -97,7 +97,7 @@
 #define DEFAULT_MINIMUMFEEDRATE       0.0     // minimum feedrate
 #define DEFAULT_MINTRAVELFEEDRATE     0.0
 
-//#define HOME_AFTER_DEACTIVATE  // Require rehoming after steppers are deactivated
+#define HOME_AFTER_DEACTIVATE  // Require rehoming after steppers are deactivated
 
 #if ENABLED(ULTIPANEL)
   #define MANUAL_FEEDRATE {70*60, 70*60, 4*60, 60}
@@ -287,7 +287,7 @@
   //#define STATUS_FAN_FRAMES 3       // :[0,1,2,3,4] Number of fan animation frames
   #define STATUS_HEAT_PERCENT       // Show heating in a progress bar
   //#define BOOT_MARLIN_LOGO_SMALL    // Show a smaller Marlin logo on the Boot Screen (saving 399 bytes of flash)
-  #define BOOT_MARLIN_LOGO_ANIMATED // Animated Marlin logo. Costs ~‭3260 (or ~940) bytes of PROGMEM.
+  //#define BOOT_MARLIN_LOGO_ANIMATED // Animated Marlin logo. Costs ~‭3260 (or ~940) bytes of PROGMEM.
 
   // Frivolous Game Options
   #if ENABLED(EZBOARD)
@@ -383,10 +383,11 @@
 
 #define MIN_STEPS_PER_SEGMENT 6
 
-#define BLOCK_BUFFER_SIZE 16
+#define BLOCK_BUFFER_SIZE 64
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 4
-#define TX_BUFFER_SIZE 0
+#define BUFSIZE 64
+#define TX_BUFFER_SIZE 32
+#define RX_BUFFER_SIZE 32
 
 #define SERIAL_OVERRUN_PROTECTION
 
